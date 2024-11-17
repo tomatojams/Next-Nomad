@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { API_URL } from "../../../(home)/page";
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 import MovieInfos from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";

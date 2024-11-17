@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../app/(home)/page";
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 import styles from "../app/styles/movie-videos.module.css";
 
 async function getVideos(tomato: string) {
@@ -12,7 +12,7 @@ async function getVideos(tomato: string) {
 
 export default async function MovieVideos({ tomato }: { tomato: string }) {
   const videos = await getVideos(tomato);
- 
+
   return (
     <div className={styles.container}>
       {videos.map((video) => (

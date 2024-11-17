@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_URL } from "../app/(home)/page";
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 import styles from "../app/styles/movie-info.module.css";
 async function getMovies(tomato: string) {
   console.log(`Fetching movies", ${Date.now()}`);
