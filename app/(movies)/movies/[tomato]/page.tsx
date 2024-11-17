@@ -17,13 +17,13 @@ async function getVideos(tomato: string) {
 
 export default async function Movie({ params: { tomato } }: { params: { tomato: string } }) {
   return (
-    <>
+    <div>
       <Suspense fallback={<h3>Loading movieInfo</h3>}>
         <MovieInfos tomato={tomato} />
       </Suspense>
       <Suspense fallback={<h3>Loading movieVideo</h3>}>
         <MovieVideos tomato={tomato} />
       </Suspense>
-    </>
+    </div>
   );
 }
