@@ -40,7 +40,7 @@ export default async function Movie({
 
   return (
     <>
-      <h4>Movie detail page</h4>
+     
       {/* Suespense를 쓰면 각각에 대해서 로딩상태 표시가가능*/}
       <Suspense fallback={<h3>Loading movieInfo</h3>}>
         {" "}
