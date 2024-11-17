@@ -5,7 +5,7 @@ import MovieInfos from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
 import { Suspense } from "react";
 
-export async function getMovies(tomato: string) {
+async function getMovies(tomato: string) {
   const res = await axios(`${API_URL}/${tomato}`);
   return res.data;
 }
