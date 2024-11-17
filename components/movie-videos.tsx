@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_URL } from "../app/(home)/page";
+import styles from "../app/styles/movie-videos.module.css";
 
 async function getVideos(tomato: string) {
   console.log(`Fetching videos", ${Date.now()}`);
@@ -11,6 +12,18 @@ async function getVideos(tomato: string) {
 
 export default async function MovieVideos({ tomato }: { tomato: string }) {
   const videos = await getVideos(tomato);
-  //   console.log("video", videos[0]);
-  return <h6>{videos[0].name}</h6>;
+ 
+  return (
+    <div className={styles.container}>
+      {videos.map((video) => (
+        <iframe
+          key={video.id}
+          src={`https://youtube.com/embed/${video.key}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title={video.name}
+        />
+      ))}
+    </div>
+  );
 }
